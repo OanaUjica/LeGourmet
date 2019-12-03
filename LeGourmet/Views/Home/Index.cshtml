@@ -1,6 +1,6 @@
 ﻿@model Contact
 
-<div id="myPage" class="container">
+<div class="container">
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
@@ -53,10 +53,8 @@
 
     <!-- Container (The About Catering Section) -->
 
-    <br /><br /><br />
-
     <div id="about">
-        <h1 class="text-center">About Catering</h1>
+        <h1 class="text-center" style="padding-top: 70px;">About Catering</h1>
         <br /><br />
         <p style="font-size:large" class="text-center"><em>Tradition since 2001</em></p>
         <p style="font-size:medium" class="text-center">
@@ -100,39 +98,35 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 
+
     <!-- Container (Menu Section) -->
-    <br /><br /><br /><br />
-    <hr>
-    <br /><br /><br /><br />
+
+    <hr />
     <div>
         <div id="menu">
-            <h1 class="text-center">Our Menu</h1>
+            <h1 class="text-center" style="padding-top: 70px;">Our Menu</h1>
             <p class="text-center" style="font-size:large; color:darkcyan">Please click on the image if you want to visualize our full menu.</p>
             <div class="row">
                 <div>
                     <div class="text-center">
                         <a asp-controller="Menu" asp-action="Index">
                             <img src="~/images/8.jpg" alt="" class="btn" style="padding:20px 120px;" />
-                        </a>                        
+                        </a>
                     </div>
                 </div>
-                <br /><br />
             </div>
         </div>
     </div>
 
 
     <!-- Container (Contact Section) -->
-    <br /><br /><br /><br />
-    <hr>
-    <br /><br /><br /><br />
 
+    <hr>
     <div id="contact">
-        <h1>Contact</h1>
+        <h1 style="padding-top: 70px;">Contact</h1>
         <br /><br />
         <p style="font-size:large; color:darkcyan">We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste.</p>
         <p style="font-size:large; color:darkcyan">Do not hesitate to contact us.</p>
@@ -164,7 +158,7 @@
                         <textarea class="form-control" asp-for="Message" placeholder="Message\Special requirement" rows="5" required></textarea>
                         <span asp-validation-for="Message" class="text-danger"></span>
                     </div>
-                    
+
                     <br>
                     <div class="row">
                         <div class="col-md-12 form-group">
