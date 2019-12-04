@@ -1,6 +1,5 @@
 ﻿@model HomeViewModel
-
-
+<!-- NavBar -->
 <nav class="navbar navbar-default navbar-fixed-top" style="background-color:white; font-size: 15px; border-bottom-color:whitesmoke; border-bottom:inset;letter-spacing:4px;">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -13,24 +12,29 @@
         </div>
     </div>
 </nav>
-<br /><br /><br />
-<div class="text-center">
-    <h1>Our Recipes</h1>
-</div>
-<div class="row">
-    @foreach (var r in Model.Recipes)
-    {
 
-        <div class="col-md-4">
-            <div class="thumbnail">
-                <img src="~/images/@(r.ImageUrl).jpg" alt="" style="width:100%">
-                <div class="caption">
-                    <h3>@r.Name</h3>
-                    <p>Description: @r.Description</p>
+
+<!-- Container (The Recipes Section) -->
+<br /><br /><br />
+<div class="container">
+    <div class="text-center">
+        <h1>Our Recipes</h1>
+    </div>
+    <div class="row">
+        @foreach (var r in Model.Recipes)
+        {
+
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <img src="~/images/@(r.ImageUrl).jpg" alt="" style="width:100%">
+                    <div class="caption">
+                        <h3>@r.Name</h3>
+                        <p>Description: @r.Description</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    }
+        }
+    </div>
 </div>
 <br /><br />
 
