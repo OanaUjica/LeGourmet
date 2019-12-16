@@ -31,7 +31,7 @@ namespace LeGourmet.Controllers
                 _contactRepository.AddContact(contact);
                 return View();
             }
-            return RedirectToAction("Index",contact);
+            return RedirectToAction(nameof(Index),contact);
         }
     }
 }
