@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using LeGourmet.Models;
-using LeGourmet.ViewModels;
+﻿using LeGourmet.Models;
+using LeGourmet.Services;
 using Microsoft.AspNetCore.Mvc;
+
 
 namespace LeGourmet.Controllers
 {
@@ -26,7 +23,7 @@ namespace LeGourmet.Controllers
         [HttpPost]
         public IActionResult ContactComplete(Contact contact)
         {
-            if (ModelState.IsValid)
+            if (ModelState.IsValid && contact != null)
             {
                 _contactRepository.AddContact(contact);
                 return View();

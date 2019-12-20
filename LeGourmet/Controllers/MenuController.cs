@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using LeGourmet.Models;
-using LeGourmet.ViewModels;
+using LeGourmet.Services;
 
 namespace LeGourmet.Controllers
 {
@@ -18,15 +15,22 @@ namespace LeGourmet.Controllers
         {
             _recipeRepository = recipeRepository;
         }
+
+
         public IActionResult Index()
-        {
+        {            
             var recipes = _recipeRepository.GetAllRecipes().OrderBy(p => p.Id);
-            var homeViewModel = new HomeViewModel()
+
+            if (recipes != null)
             {
-                Title = "Le Gourmet Cathering",
-                Recipes = recipes.ToList()
-            };
-            return View(homeViewModel);
+                var homeViewModel = new HomeViewModel()
+                {
+                    Title = "Le Gourmet Cathering",
+                    Recipes = recipes.ToList()
+                };
+                return View(homeViewModel);
+            }
+            return View();
         }
     }
 }

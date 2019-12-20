@@ -1,9 +1,9 @@
-﻿using System;
+﻿using LeGourmet.Models;
+using LeGourmet.Services;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace LeGourmet.Models
+
+namespace LeGourmet.Database
 {
     public class MockRecipeRepository : IRecipeRepository
     {

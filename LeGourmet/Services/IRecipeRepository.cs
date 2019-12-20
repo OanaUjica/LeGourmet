@@ -1,9 +1,8 @@
-﻿using System;
+﻿using LeGourmet.Models;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace LeGourmet.Models
+
+namespace LeGourmet.Services
 {
     public interface IRecipeRepository
     {

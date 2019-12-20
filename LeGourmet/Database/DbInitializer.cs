@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using LeGourmet.Models;
 using System.Linq;
-using System.Threading.Tasks;
 
-namespace LeGourmet.Models
+
+namespace LeGourmet.Database
 {
     public class DbInitializer
     {

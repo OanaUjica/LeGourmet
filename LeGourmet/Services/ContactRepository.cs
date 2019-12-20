@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using LeGourmet.Models;
 
-namespace LeGourmet.Models
+namespace LeGourmet.Services
 {
     public class ContactRepository : IContactRepository
     {
