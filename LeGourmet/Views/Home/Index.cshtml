@@ -1,7 +1,6 @@
 ﻿@model Contact
-
 <!-- Container (The Header Section) -->
-<div class="container">
+<div class="container-fluid" style="width:78%; padding-top:63px;">
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
@@ -14,7 +13,7 @@
         <div class="carousel-inner">
 
             <div class="item active">
-                <img src="~/images/4.jpg" alt="LeGourmet Catering" style="width:100%;">
+                <img src="~/images/2.jpg" alt="LeGourmet Catering" style="width:100%;">
                 <div class="carousel-caption">
                     <h3>Le Gourmet Catering</h3>
                     <p>We love dessert!</p>
@@ -22,7 +21,7 @@
             </div>
 
             <div class="item">
-                <img src="~/images/2.jpg" alt="LeGourmet Catering" style="width:100%;">
+                <img src="~/images/4.jpg" alt="LeGourmet Catering" style="width:100%;">
                 <div class="carousel-caption">
                     <h3>Le Gourmet Catering</h3>
                     <p>We love food!</p>
@@ -50,21 +49,26 @@
             </a>
         </div>
     </div>
+</div>
 
 
+<div class="container">
     <!-- Container (The About Catering Section) -->
 
     <div id="about">
         <h1 class="text-center" style="padding-top: 70px;">About Catering</h1>
-        <br /><br />
+        <br />
         <p style="font-size:large" class="text-center"><em>Tradition since 2001</em></p>
         <p style="font-size:medium" class="text-center">
             The Catering was founded in Cluj-Napoca by Oana Ujica. Delicious catering for every occasion
-            LeGourmet is one of the finest caterers in Cluj-Napoca. We are a family run restaurant that has built an excellent reputation for our delicious food. Tickle your taste buds with flavours from around the world in the city of Cluj-Napoca. Business lunch and large order can now be order the same day delivery. Event catering must be ordered with at least a week’s notice. Get in touch with one of our team members. We understand how important your special event is to you and we have a reputation for on-time delivery, attention to detail and excellent customer service. With over 20 years in this business, we specialise in event catering and business lunch delivery. Contact us for further details.
+            LeGourmet is one of the finest caterers in Cluj-Napoca. We are a family run restaurant that has built an excellent reputation for our delicious food. 
+            Tickle your taste buds with flavours from around the world in the city of Cluj-Napoca. Business lunch and large order can now be order the same day delivery. 
+            Event catering must be ordered with at least a week’s notice. Get in touch with one of our team members. We understand how important your special event is to you and we have a reputation for on-time delivery, attention to detail and excellent customer service. 
+            With over 16 years in this business, we specialise in event catering and business lunch delivery. <a href="#contact">Contact us</a> for further details.
         </p>
         <br>
         <div class="row">
-            <div class="container text-center" style="padding:40px 80px;">
+            <div class="container text-center" style="padding:40px 80px; padding-bottom:100px;">
                 <div class="col-sm-4">
                     <p class="text-center"><strong>Soup</strong></p><br>
                     <a href="#demo3" data-toggle="collapse">
@@ -101,34 +105,37 @@
             </div>
         </div>
     </div>
+</div>
+
+<!-- Container (Menu Section) -->
 
 
-    <!-- Container (Menu Section) -->
-
+<div class="container">
     <hr />
     <div>
         <div id="menu">
-            <h1 class="text-center" style="padding-top: 70px;">Our Menu</h1>
+            <h1 class="text-center" style="padding-top:70px;">Our Menu</h1>
+            <br />
             <p class="text-center" style="font-size:large; color:darkcyan">Please click on the image if you want to visualize our full menu.</p>
             <div class="row">
                 <div>
                     <div class="text-center">
                         <a asp-controller="Menu" asp-action="Index">
-                            <img src="~/images/8.jpg" alt="Cake" class="btn; img-responsive" style="padding:20px 160px;" />
+                            <img src="~/images/8.jpg" alt="Cake" class="btn; img-responsive" style="padding:0px 160px; padding-bottom:100px;" />
                         </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
-
-    <!-- Container (Contact Section) -->
-
+<!-- Container (Contact Section) -->
+<div class="container" style="padding-bottom:40px;">
     <hr>
     <div id="contact">
-        <h1 style="padding-top: 70px;">Contact</h1>
-        <br /><br />
+        <h1 class="text-center" style="padding-top: 70px;">Contact</h1>
+        <br />
         <p style="font-size:large; color:darkcyan">We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste.</p>
         <p style="font-size:large; color:darkcyan">Do not hesitate to contact us.</p>
         <br /><br />
@@ -141,23 +148,17 @@
             </div>
 
             <form asp-action="Index" method="post" role="form">
-
-                <div asp-validation-summary="All" class="text-danger"></div>
-
                 <div class="col-md-8">
                     <div class="row">
                         <div class="col-sm-6 form-group">
                             <input class="form-control" asp-for="Name" placeholder="Name" type="text" required>
-                            <span asp-validation-for="Name" class="text-danger"></span>
                         </div>
                         <div class="col-sm-6 form-group">
                             <input class="form-control" asp-for="Email" placeholder="Email" type="email" required>
-                            <span asp-validation-for="Email" class="text-danger"></span>
                         </div>
                     </div>
                     <div>
                         <textarea class="form-control" asp-for="Message" placeholder="Message\Special requirement" rows="5" required></textarea>
-                        <span asp-validation-for="Message" class="text-danger"></span>
                     </div>
 
                     <br>
@@ -171,18 +172,17 @@
 
         </div>
         <br>
-
-
     </div>
 
     <!-- Image of location/map (Google Maps Section) -->
-    <div id="map" style="width:100%; height:600px;"></div>
+    <br>
+    <div id="map" style="width:100%; height:360px;"></div>
 
     <script>
         function myMap() {
             var mapCanvas = document.getElementById("map");
             var mapOptions = {
-                center: new google.maps.LatLng(46.766600, 23.553462), zoom: 10
+                center: new google.maps.LatLng(46.765850, 23.553433), zoom: 10
             };
             var map = new google.maps.Map(mapCanvas, mapOptions);
         }
