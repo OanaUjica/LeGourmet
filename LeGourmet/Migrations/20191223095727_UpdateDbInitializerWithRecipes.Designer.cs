@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LeGourmet.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20191127105331_UpdateDbInitializer")]
-    partial class UpdateDbInitializer
+    [Migration("20191223095727_UpdateDbInitializerWithRecipes")]
+    partial class UpdateDbInitializerWithRecipes
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -19,6 +19,23 @@ namespace LeGourmet.Migrations
                 .HasAnnotation("ProductVersion", "2.2.6-servicing-10079")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+            modelBuilder.Entity("LeGourmet.Models.Contact", b =>
+                {
+                    b.Property<int>("ContactId")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Email");
+
+                    b.Property<string>("Message");
+
+                    b.Property<string>("Name");
+
+                    b.HasKey("ContactId");
+
+                    b.ToTable("Contacts");
+                });
 
             modelBuilder.Entity("LeGourmet.Models.Recipe", b =>
                 {

@@ -23,14 +23,15 @@ namespace LeGourmet.Controllers
 
             if (recipes != null)
             {
-                var homeViewModel = new HomeViewModel()
-                {
-                    Title = "Le Gourmet Cathering",
+                var homeViewModel = new MenuViewModel()
+                { 
                     Recipes = recipes.ToList()
                 };
                 return View(homeViewModel);
             }
             return View();
         }
+
+
     }
 }

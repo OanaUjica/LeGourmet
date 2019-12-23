@@ -1,7 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using LeGourmet.Models;
+using Microsoft.EntityFrameworkCore;
 
 
-namespace LeGourmet.Models
+namespace LeGourmet.Database
 {
     public class AppDbContext : DbContext
     {

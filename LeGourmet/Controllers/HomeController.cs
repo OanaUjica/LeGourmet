@@ -20,15 +20,29 @@ namespace LeGourmet.Controllers
             return View();
         }
 
+
         [HttpPost]
-        public IActionResult ContactComplete(Contact contact)
+        public IActionResult Index(Contact contact)
         {
             if (ModelState.IsValid && contact != null)
             {
                 _contactRepository.AddContact(contact);
-                return View();
+                return RedirectToAction(nameof(ContactComplete));
             }
-            return RedirectToAction(nameof(Index),contact);
+            return View(contact);
+        }
+
+
+
+        public IActionResult ContactComplete(Contact contact)
+        {
+            return View();
+            //if (ModelState.IsValid && contact != null)
+            //{
+            //    _contactRepository.AddContact(contact);
+            //    return View();
+            //}
+            //return RedirectToAction(nameof(Index),contact);
         }
     }
 }

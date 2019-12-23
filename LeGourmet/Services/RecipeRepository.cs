@@ -1,4 +1,5 @@
-﻿using LeGourmet.Models;
+﻿using LeGourmet.Database;
+using LeGourmet.Models;
 using System.Collections.Generic;
 
 

@@ -1,4 +1,4 @@
-﻿using LeGourmet.Models;
+﻿using LeGourmet.Database;
 using LeGourmet.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
