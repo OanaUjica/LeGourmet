@@ -23,11 +23,11 @@ namespace LeGourmet.Controllers
 
             if (recipes != null)
             {
-                var homeViewModel = new MenuViewModel()
+                var menuViewModel = new MenuViewModel()
                 { 
                     Recipes = recipes.ToList()
                 };
-                return View(homeViewModel);
+                return View(menuViewModel);
             }
             return View();
         }

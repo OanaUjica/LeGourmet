@@ -37,12 +37,6 @@ namespace LeGourmet.Controllers
         public IActionResult ContactComplete(Contact contact)
         {
             return View();
-            //if (ModelState.IsValid && contact != null)
-            //{
-            //    _contactRepository.AddContact(contact);
-            //    return View();
-            //}
-            //return RedirectToAction(nameof(Index),contact);
         }
     }
 }

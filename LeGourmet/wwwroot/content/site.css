@@ -1,11 +1,88 @@
-﻿.button1:hover {
-    background-color: cadetblue;
-    color: white;
-    box-shadow: 0 6px 10px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+﻿
+.navigationBar {
+    background-color:white; 
+    font-size: 17px; 
+    border-bottom-color:whitesmoke; 
+    border-bottom:inset; 
+    letter-spacing:4px;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: "Playfair Display";
     letter-spacing: 6px;
     font-size:30px;
+}
+
+
+/* Main page */
+/* Carousel Section */
+#carousel {
+    width:78%; 
+    padding-top:63px;
+}
+
+.item active img {
+    width:100%;
+}
+
+.item img{
+    width: 100%;
+}
+
+/* About Section */
+#about h1 {
+    padding-top: 70px;
+}
+
+#about .subtitle {
+    font-size:large;
+}
+
+#about .text {
+    font-size:medium
+}
+
+#about .roundedImages {
+    padding: 40px 80px;
+    padding-bottom: 100px;
+}
+
+/* Menu Section */
+#menu h1 {
+    padding-top: 70px;
+}
+
+#menu p {
+    font-size:large; 
+    color:darkcyan;
+}
+
+#menu img {
+    padding:0px 160px; 
+    padding-bottom:100px;
+}
+
+/* Contact Section */
+#contact h1 {
+    padding-top: 70px;
+}
+
+#contact .presentation {
+    font-size:large; 
+    color:darkcyan;
+}
+
+.submitButton:hover {
+    background-color: cadetblue;
+    color: white;
+    box-shadow: 0 6px 10px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+/* Menu Page*/
+.menuNavBar {
+    background-color: white;
+    font-size: 15px;
+    border-bottom-color: whitesmoke;
+    border-bottom: inset;
+    letter-spacing: 4px;
 }
